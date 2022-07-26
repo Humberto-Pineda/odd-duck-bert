@@ -49,6 +49,16 @@ section div.clicks {
 }
 /* not working yet */
 *
+
+span {
+  height: fit-content;
+  width: fit-content;
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
 #one {
   grid-column-start: 2;
   grid-column-end: 3;

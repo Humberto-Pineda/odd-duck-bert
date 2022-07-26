@@ -1,3 +1,5 @@
 'strict';
 
-console.log('hi');
+let myContainer = document.querySelector('span');
+let myButton = document.querySelector('section + div');
+
