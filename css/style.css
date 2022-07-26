@@ -1,0 +1,99 @@
+header {
+  background-color:cornsilk;
+  height: 150px;
+  display: flex;
+  align-content: flex-start;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  padding-top: 45px;
+  padding-left: 50px;
+}
+
+main {
+  background-color: aqua;
+  height: 700px;
+}
+
+main img:hover {
+  border: 5px solid green;
+  cursor:pointer;
+}
+
+.container {
+  height: 700px;
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 45% 10% 45%;
+}
+*
+/* not working yet */
+section div {
+  background-color: white;
+  color: black;
+  padding: 2px 1px;
+  width: max-content;
+  height: max-content;
+  font-size: 16px;
+  margin: 1rem;
+}
+
+section div.clicks {
+  pointer-events: auto;
+  cursor: pointer;
+  background-color: green;
+  color: white;
+}
+/* not working yet */
+*
+#one {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+#two {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+#three {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+
+
+article {
+  font-size: 25px;
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+section {
+  font-size: 25px;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+
+main img {
+  height: 250px;
+  width: 350px;
+}
+
+footer {
+  background-color: blueviolet;
+  height: 150px;
+}

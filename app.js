@@ -1,0 +1,3 @@
+'strict';
+
+console.log('hi');
