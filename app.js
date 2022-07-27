@@ -28,8 +28,9 @@ function renderProduct() {
   let product2 = getRandomProduct();
   let product3 = getRandomProduct();
   console.log(product1, product2, product3);
-  while (product1 === product2, product3) {
-    product2, product3 = getRandomProduct();
+  while (product1 === product2 || product1 === product3 || product2 === product3) {
+    product2 = getRandomProduct();
+    product3 = getRandomProduct();
   }
   image1.src = allProducts[product1].src;
   image1.atl = allProducts[product1].name;
@@ -49,6 +50,7 @@ function handleProductClick(event) {
   }
   clicks++;
 }
+myContainer.addEventListener('click', handleProductClick);
 
 let bag = new Product('bag');
 let banana = new Product('banana');
@@ -74,4 +76,3 @@ allProducts.push(bag, banana, bathroom, boots, breakfast, bubblegum, chair, cthu
 
 console.log(renderProduct());
 
-myContainer.addEventListener('click', handleProductClick);
