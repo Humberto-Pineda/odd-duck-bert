@@ -14,7 +14,7 @@ let clicksAllowed = 15;
 
 function Product(name, fileExtension = 'jpg') {
   this.name = name;
-  this.src = `images/${this.name}.${fileExtension}`;
+  this.src = `img/${this.name}.${fileExtension}`;
   this.clicks = 0;
   this.views = 0;
 }
@@ -32,8 +32,22 @@ function renderProduct() {
     product2, product3 = getRandomProduct();
   }
   image1.src = allProducts[product1].src;
+  image1.atl = allProducts[product1].name;
+  allProducts[product1].views++;
   image2.src = allProducts[product2].src;
+  image2.alt = allProducts[product2].name;
+  allProducts[product2].views++;
   image3.src = allProducts[product3].src;
+  image3.alt = allProducts[product3].name;
+  allProducts[product3].views++;
+  console.log(allProducts);
+}
+
+function handleProductClick(event) {
+  if (event.target === myContainer) {
+    alert('It works');
+  }
+  clicks++;
 }
 
 let bag = new Product('bag');
@@ -59,3 +73,5 @@ let wine = new Product('wine-glass');
 allProducts.push(bag, banana, bathroom, boots, breakfast, bubblegum, chair, cthulhu, dog, dragon, pen, pet, scissors, shark, sweep, tauntaun, unicorn, water, wine);
 
 console.log(renderProduct());
+
+myContainer.addEventListener('click', handleProductClick);
