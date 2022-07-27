@@ -31,7 +31,7 @@ main img:hover {
 }
 *
 /* not working yet */
-section div {
+/* section div {
   background-color: white;
   color: black;
   padding: 2px 1px;
@@ -46,7 +46,7 @@ section div.clicks {
   cursor: pointer;
   background-color: green;
   color: white;
-}
+} */
 /* not working yet */
 *
 
@@ -59,28 +59,32 @@ span {
   grid-row-end: 2;
 }
 
-#one {
+img:first-child {
+  height: 250px;
+  width: 350;
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 1;
   grid-row-end: 2;
 }
 
-#two {
+img:nth-child(2) {
+  height: 250px;
+  width: 350;
   grid-column-start: 3;
   grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 2;
 }
 
-#three {
+img:nth-child(3) {
+  height: 250px;
+  width: 350;
   grid-column-start: 4;
   grid-column-end: 5;
   grid-row-start: 1;
   grid-row-end: 2;
 }
-
-
 
 article {
   font-size: 25px;
