@@ -39,7 +39,7 @@ ul {
 }
 *
 /* not working yet */
-section + div {
+/* section + div {
   background-color: white;
   color: black;
   padding: 2px 1px;
@@ -56,7 +56,7 @@ section div.clicks-allowed {
   cursor: pointer;
   background-color: green;
   color: white;
-}
+} */
 /* not working yet */
 *
 
