@@ -72,28 +72,16 @@ span {
 img:first-child {
   height: 310px;
   width: 350;
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 2;
 }
 
 img:nth-child(2) {
   height: 310px;
   width: 350;
-  grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 2;
 }
 
 img:nth-child(3) {
   height: 310px;
   width: 350;
-  grid-column-start: 4;
-  grid-column-end: 5;
-  grid-row-start: 1;
-  grid-row-end: 2;
 }
 
 article {
