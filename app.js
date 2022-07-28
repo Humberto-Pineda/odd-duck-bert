@@ -105,7 +105,7 @@ let wine = new Product('wine-glass');
 
 allProducts.push(bag, banana, bathroom, boots, breakfast, bubblegum, chair, cthulhu, dog, dragon, pen, pet, scissors, shark, sweep, tauntaun, unicorn, water, wine);
 
-const labels = ['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'gray'];
+const labels = ['red', 'white', 'blue', 'green', 'brown', 'yellow', 'purple'];
 
 const data = {
   labels: labels,
