@@ -1,7 +1,7 @@
-'strict';
+'use strict';
 
 let myContainer = document.querySelector('span');
-let myButton = document.querySelector('section + div');
+let myButton = document.getElementById('button');
 
 let image1 = document.querySelector('span img:first-child');
 let image2 = document.querySelector('span img:nth-child(2)');
@@ -14,7 +14,7 @@ let clicksAllowed = 15;
 
 function Product(name, fileExtension = 'jpg') {
   this.name = name;
-  this.src = `images/${this.name}.${fileExtension}`;
+  this.src = `img/${this.name}.${fileExtension}`;
   this.clicks = 0;
   this.views = 0;
 }
@@ -27,14 +27,61 @@ function renderProduct() {
   let product1 = getRandomProduct();
   let product2 = getRandomProduct();
   let product3 = getRandomProduct();
-  console.log(product1, product2, product3);
-  while (product1 === product2, product3) {
-    product2, product3 = getRandomProduct();
+  
+  while (product1 === product2 || product1 === product3 || product2 === product3) {
+    product2 = getRandomProduct();
+    product3 = getRandomProduct();
   }
   image1.src = allProducts[product1].src;
+  image1.alt = allProducts[product1].name;
+  allProducts[product1].views++;
   image2.src = allProducts[product2].src;
+  image2.alt = allProducts[product2].name;
+  allProducts[product2].views++;
   image3.src = allProducts[product3].src;
+  image3.alt = allProducts[product3].name;
+  allProducts[product3].views++;
+  // console.log(allProducts);
 }
+
+function handleProductClick(event) {
+  if (event.target === myContainer) {
+    alert('It works');
+  }
+  clicks++;
+  let clickedProduct = event.target.alt;
+
+  for (let i=0; i < allProducts.length; i++) {
+    if (clickedProduct === allProducts[i].name) {
+      allProducts[i].clicks++;
+      break;
+    }
+  }
+  renderProduct();
+  if (clicks === clicksAllowed) {
+    myButton.className = 'clicks-allowed';
+    myContainer.removeEventListener('click', handleProductClick);
+    myButton.addEventListener('click', handleButtonClick);
+  }
+}
+
+function handleButtonClick(event) {
+  if(clicks === clicksAllowed) {
+    renderResults();
+  }
+}
+
+let ul = document.querySelector('ul');
+
+function renderResults() {
+  for (let i=0; i < allProducts.length; i++) {
+    let li = document.createElement('li');
+    li.textContent = `${allProducts[i].name} had ${allProducts[i].views} and was clicked on ${allProducts[i].clicks} times`;
+    ul.appendChild(li);
+  }
+}
+
+myContainer.addEventListener('click', handleProductClick);
 
 let bag = new Product('bag');
 let banana = new Product('banana');
@@ -57,5 +104,3 @@ let water = new Product('water-can');
 let wine = new Product('wine-glass');
 
 allProducts.push(bag, banana, bathroom, boots, breakfast, bubblegum, chair, cthulhu, dog, dragon, pen, pet, scissors, shark, sweep, tauntaun, unicorn, water, wine);
-
-console.log(renderProduct());
