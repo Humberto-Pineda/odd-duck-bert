@@ -8,6 +8,7 @@ let image2 = document.querySelector('span img:nth-child(2)');
 let image3 = document.querySelector('span img:nth-child(3)');
 
 let allProducts = [];
+let indexArray = [];
 let clicks = 0;
 
 let clicksAllowed = 15;
@@ -24,14 +25,25 @@ function getRandomProduct() {
 }
 
 function renderProduct() {
-  let product1 = getRandomProduct();
-  let product2 = getRandomProduct();
-  let product3 = getRandomProduct();
+  // let product1 = getRandomProduct();
+  // let product2 = getRandomProduct();
+  // let product3 = getRandomProduct();
 
-  while (product1 === product2 || product1 === product3 || product2 === product3) {
-    product2 = getRandomProduct();
-    product3 = getRandomProduct();
+  // while (product1 === product2 || product1 === product3 || product2 === product3) {
+  //   product2 = getRandomProduct();
+  //   product3 = getRandomProduct();
+  // }
+
+  while (indexArray.length < 6) {
+    let randomNum = getRandomProduct();
+    if (!indexArray.includes(randomNum)) {
+      indexArray.push(randomNum);
+    }
   }
+  let product1 = indexArray[0];
+  let product2 = indexArray[1];
+  let product3 = indexArray[2];
+
   image1.src = allProducts[product1].src;
   image1.alt = allProducts[product1].name;
   allProducts[product1].views++;
