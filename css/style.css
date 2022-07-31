@@ -30,15 +30,14 @@ main img:hover {
   height: 700px;
   border: 1px solid black;
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-columns: 40% 25% 25% 10%;
   grid-template-rows: 45% 10% 45%;
 }
 
 ul {
   height: 500px;
 }
-*
-/* not working yet */
+
 /* section + div {
   background-color: white;
   color: black;
@@ -57,8 +56,6 @@ section div.clicks-allowed {
   background-color: green;
   color: white;
 } */
-/* not working yet */
-*
 
 span {
   height: fit-content;
@@ -69,19 +66,9 @@ span {
   grid-row-end: 2;
 }
 
-img:first-child {
-  height: 310px;
-  width: 350;
-}
-
-img:nth-child(2) {
-  height: 310px;
-  width: 350;
-}
-
-img:nth-child(3) {
-  height: 310px;
-  width: 350;
+main img {
+  height: 250px;
+  width: 250px;
 }
 
 article {
@@ -100,10 +87,6 @@ section {
   grid-row-end: 4;
 }
 
-main img {
-  height: 250px;
-  width: 350px;
-}
 
 footer {
   background-color: blueviolet;
