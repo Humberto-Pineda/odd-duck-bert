@@ -56,6 +56,15 @@ function renderProduct() {
   // console.log(allProducts);
 }
 
+function rememberProducts() {
+  let possibleProduct = localStorage.getItem('vote');
+}
+
+function storeProducts() {
+  let stringifiedProducts = JSON.stringify(allProducts);
+  localStorage.setItem('vote', stringifiedProducts);
+}
+
 function handleProductClick(event) {
   if (event.target === myContainer) {
     alert('It works');
@@ -84,7 +93,7 @@ function handleProductClick(event) {
 //   }
 // }
 
-let ul = document.querySelector('ul');
+// let ul = document.querySelector('ul');
 
 // function renderResults() {
 //   for (let i=0; i < allProducts.length; i++) {
