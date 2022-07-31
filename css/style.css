@@ -30,7 +30,7 @@ main img:hover {
   height: 700px;
   border: 1px solid black;
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-columns: 40% 25% 25% 10%;
   grid-template-rows: 45% 10% 45%;
 }
 
@@ -67,7 +67,7 @@ span {
 }
 main img {
   height: 250px;
-  width: 350px;
+  width: 250px;
 }
 
 article {
