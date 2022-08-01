@@ -16,8 +16,16 @@ h1 {
   padding-left: 50px;
 }
 
+h2 {
+  padding-left: 245px;
+  margin-bottom: 75px;
+  font-size: 2rem;
+  color:darkgoldenrod;
+  font-weight: 600;
+}
+
 main {
-  background-color: aqua;
+  background-color:white;
   height: 700px;
 }
 
@@ -30,7 +38,7 @@ main img:hover {
   height: 700px;
   border: 1px solid black;
   display: grid;
-  grid-template-columns: 40% 25% 25% 10%;
+  grid-template-columns: 45% 25% 25% 5%;
   grid-template-rows: 45% 10% 45%;
 }
 
@@ -89,6 +97,15 @@ section {
 
 
 footer {
-  background-color: blueviolet;
-  height: 150px;
+  background-color: cornsilk;
+  height: 100px;
+}
+
+footer p {
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  padding-top: 30px;
+  color:teal;
+  font-weight:700
 }

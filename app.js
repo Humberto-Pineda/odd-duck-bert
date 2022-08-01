@@ -209,3 +209,5 @@ function renderChart() {
     config
   );
 }
+
+renderProduct();
